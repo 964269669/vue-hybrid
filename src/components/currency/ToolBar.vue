@@ -1,5 +1,4 @@
 <template>
-    
     <div class="tool-bar" :class="{'iphonex-bottom' : $store.state.isIphoneX}">
         <!-- tab 按钮 , 需要有一个数据源，通过这个数据源来去驱动视图-->
         <div class="tool-bar-item" @click="onChangeFragment(item, index)"
@@ -10,7 +9,6 @@
             <p class="tool-bar-item-name" :class="{'tool-bar-item-name-h' : index === selectItemIndex}">{{item.name}}</p>
         </div>
     </div>
-
 </template>
 
 <script>
@@ -30,7 +28,7 @@
  */
 export default {
     name: 'ToolBar',
-    data: function () {
+    data: function() {
         return {
             // tab 按钮数据源，vue 、react、angular MVVM 框架，数据驱动视图
             toolBarData: [
@@ -70,16 +68,16 @@ export default {
         }
     },
     methods: {
-        onChangeFragment: function (item, index) {
-            this.selectItemIndex = index;
-            this.$emit('onChangeFragment', item.componentName);
+        onChangeFragment: function(item, index) {
+            this.selectItemIndex = index
+            this.$emit('onChangeFragment', item.componentName)
         },
         /**
          * 指定切换的 tab 页
          */
-        pushFragment: function (index) {
+        pushFragment: function(index) {
             // 调用 onChangeFragment 切换对应的 tab
-            this.onChangeFragment(this.toolBarData[index] , index);
+            this.onChangeFragment(this.toolBarData[index], index)
         }
     }
 }
