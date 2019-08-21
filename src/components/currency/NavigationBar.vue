@@ -71,19 +71,16 @@ export default {
         justify-content: space-between;
         // 适配沉浸式手机 statusBar
         // padding-top: $statusBarHeight;
-
         .left, .right {
             display: flex;
             height: 100%;
             width: px2rem(26);
             padding: 0 $marginSize;
-
             img {
                 width: 100%;
                 align-self: center;
             }
         }
-
         .center {
             display: flex;
             height: 100%;
@@ -96,7 +93,6 @@ export default {
             }
         }
     }
-
     .bottom-line {
         border-bottom: 1px solid $lineColor;
     }

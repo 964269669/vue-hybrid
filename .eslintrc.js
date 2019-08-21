@@ -27,7 +27,7 @@ module.exports = {
     //     "baseIndent": 1
     //   }
     // ],
-    'vue/html-indent': [2, 4],
+    'vue/html-indent': [2, 2],
     'vue/html-self-closing': 'off',
     "vue/name-property-casing": ["error", "PascalCase"],
     'accessor-pairs': 2,

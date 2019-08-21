@@ -8,7 +8,7 @@
 <script>
 import toolBar from '@c/currency/ToolBar.vue'
 export default {
-  name: '',
+  name: 'imooc',
   components: {
     'tool-bar': toolBar,
     // 异步方式引入组件
@@ -36,6 +36,7 @@ export default {
 
 <style lang="scss" scoped>
   .main{
+    position: absolute;
     width: 100%;
     height: 100%;
     display: flex;

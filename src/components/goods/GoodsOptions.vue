@@ -136,23 +136,19 @@ export default {
     .goods-options {
         width: 100%;
         border-bottom: 1px solid $lineColor;
-
         // 一级选项 css
         &-list {
             display: flex;
             width: 100%;
             height: px2rem(46);
             background-color: white;
-
             &-item {
                 flex-grow: 1;
-
                 &-content {
                     height: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-
                     &-name {
                         font-size: $infoSize;
                         margin-right: $marginSize;
@@ -161,7 +157,6 @@ export default {
                             color: $mainColor;
                         }
                     }
-
                     // 三角形的动画
                     &-caret {
                         // 子选项展开时，三角形的动画
@@ -178,7 +173,6 @@ export default {
                 }
             }
         }
-
         // 子选项 css
         .options-sub-content {
             position: absolute;
@@ -187,7 +181,6 @@ export default {
             overflow: hidden;
             overflow-y: auto;
             background-color: white;
-
             &-list {
                 &-item {
                     &-content {
@@ -216,7 +209,6 @@ export default {
                 }
             }
         }
-
         // 子选项内容展开动画，当  v-if/v-show="true" 时候 调用
         .fold-height-enter-active {
             animation-duration: .3s;
