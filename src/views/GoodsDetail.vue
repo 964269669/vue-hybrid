@@ -13,14 +13,13 @@
                 <p class="goods-detail-nav-title" :style="{opacity: navBarSlotOpacity}">商品详情</p>
             </template>
         </navgation-bar>
-
         <div class="goods-detail-content" >
             <parallax @onScrollChange="onScrollChange">
                 <!-- 缓慢移动区 -->
                 <template v-slot:parallax-slow>
                     <my-swiper :height="SWIPER_IMAGE_HEIGHT + 'px'" 
-            :swiperImgs="goodsData.swiperImgs"
-            :paginationType="'2'"></my-swiper>
+                               :swiperImgs="goodsData.swiperImgs"
+                               :paginationType="'2'"></my-swiper>
                 </template>
 
                 <!-- 正常移动区 -->
@@ -58,17 +57,10 @@
                         <div class="goods-detail-content-desc-detail">
                             <img v-for="(item, index) in goodsData.detailImgs" :key="index" :src="item" alt="">
                         </div>
-
-
                     </div>
                 </template>
-
             </parallax>
-            
-
-            
         </div>
-
         <!-- 加入购物车、立即购买 -->
         <div class="goods-detail-buy" :class="{'iphonex-bottom' : $store.state.isIphoneX}">
             <div class="goods-detail-buy-add" @click="onAddGoodsClick()">
@@ -140,23 +132,15 @@ export default {
                 this.goodsData = data.goodsData;
             });
         },
-        /**
-         * 立即购买
-         */
+        /*** 立即购买 */
         onBuyClick: function () {
             this.$router.push({
                 name: 'buy',
-                params: {
-                    routerType: 'push'
-                },
-                query: {
-                    goodsId: this.goodsData.id
-                }
+                params: { routerType: 'push' },
+                query: { goodsId: this.goodsData.id }
             })
         },
-        /**
-         * 加入购物车
-         */
+        /*** 加入购物车*/
         onAddGoodsClick: function () {
             // 保存商品到购物车数据中
             // 不能通过  this.$store.addShoppingData()

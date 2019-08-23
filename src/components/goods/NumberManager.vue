@@ -1,16 +1,11 @@
 <template>
-    
-    <!-- 
-        数量控制器来说：
-            只需要去负责对数量的逻辑处理，而不需要去管其他的东西（是在商品中被引用，还是在其他的父组件中被引用）
-     -->
-
+    <!-- 数量控制器来说：
+            只需要去负责对数量的逻辑处理，而不需要去管其他的东西（是在商品中被引用，还是在其他的父组件中被引用）-->
      <div class="number-manager">
          <span class="number-manager-less" :class="{'number-manager-disabled' : number === 1}" @click="onLessClick">-</span>
          <span class="number-manager-number">{{number}}</span>
          <span class="number-manager-add" @click="onAddClick">+</span>
      </div>
-
 </template>
 
 <script>
@@ -66,7 +61,6 @@ export default {
 
 <style lang="scss" scoped>
     @import '@css/style.scss';
-
     .number-manager {
         display: flex;
         font-size: $infoSize;
