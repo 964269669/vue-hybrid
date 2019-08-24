@@ -67,6 +67,9 @@ export default {
             selectItemIndex: 0
         }
     },
+    created() {
+        console.log('x', this.$store.state)
+    },
     methods: {
         onChangeFragment: function(item, index) {
             this.selectItemIndex = index

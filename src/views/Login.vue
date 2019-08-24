@@ -99,7 +99,7 @@ export default {
                 'password': this.md5Password
             };
 
-            // 回调方法,一定要在接口调用直接创建
+            // 回调方法,一定要在接口调用之前挂载
             window.loginCallback = this.onLoginCallback;
 
             // 调用 IOS 登录接口
